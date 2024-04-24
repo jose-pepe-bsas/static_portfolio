@@ -658,6 +658,8 @@
   height: 24px;
   margin-right: var(--dl-space-space-twounits);
 }
+
+
 .home-icon14 {
   width: 24px;
   height: 24px;
@@ -879,4 +881,11 @@
     text-align: center;
     margin-bottom: var(--dl-space-space-oneandhalfunits);
   }
+}
+
+.home-hero1{
+  background-image: url('./josepepe.jpeg');
+      background-position: center; 
+    position: relative;
+      background-attachment: fixed;
 }
