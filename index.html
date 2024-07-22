@@ -441,8 +441,13 @@ src="https://www.facebook.com/tr?id=364073559835669&ev=PageView&noscript=1"
         font-family: "SF Pro Text", Helvetica, sans-serif;
       }
     </style>
-<a class="libutton" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7155614819922960385" target="_blank">Suscribirte en LinkedIn</a>
-                        
+<button id="suscribeLI" onclick="suscribeLI()" class="libutton" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7155614819922960385" target="_blank">Suscribirte en LinkedIn</button>
+          <script type="text/javascript">
+              function suscribeLI(){
+              fbq('track', 'ViewContent', {content_name: ["Suscribe LI"]});
+              window.location.href = "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7155614819922960385";
+              }
+          </script>  
                     </div>
                 </div>
             </div>        
@@ -616,7 +621,14 @@ Cómo organizar el tiempo para estudiar varias materias
                         </h4>
                         <p class="mbr-text mbr-fonts-style mt-4 display-7">Reserva una entrevista gratuita exclusivamente con Jose Pepe y consultale tu situacion para encontrar una solucion pronto.</p>
                         <div class="mbr-section-btn mt-4">
-                        <a class="btn btn-primary display-4" href="https://api.whatsapp.com/send?phone=5491128688983&text=Hola%20Jose.%20Vengo%20de%20tu%20web%20y%20me%20gustaria%20reservar%20una%20breve%20entrevista%20pronto.">¡Reservar!</a>
+                        <button id="reservaEntrevista" onclick="reservaEntrevista()" class="btn btn-primary display-4" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7155614819922960385" target="_blank">Reservar ahora</button>
+                        <script type="text/javascript">
+                          function reservaEntrevista(){
+                          fbq('track', 'Contact', {content_name: "ReservaEntrevista"});
+                          window.location.href = "https://api.whatsapp.com/send?phone=5491128688983&text=Hola%20Jose.%20Vengo%20de%20tu%20web%20y%20me%20gustaria%20reservar%20una%20breve%20entrevista%20pronto.";
+                          }
+                        </script>  
+
                         </div>
                     </div>
                 </div>
@@ -639,6 +651,13 @@ Cómo organizar el tiempo para estudiar varias materias
                 </div>
             </div>
         </div>
+          <script type="text/javascript">
+              function consultaAhora(product){
+                console.log({content_name: 'contactar por '+product})
+                fbq('track', 'ViewContent', {content_name: 'contactar por'+product});
+                window.location.href = "https://api.whatsapp.com/send?phone=5491128688983&text=Hola%20Jose.%20Vengo%20de%20tu%20web%20y%20me%20gustaria%20consultarte%20por%20"+product+".";
+              }
+          </script>
         <div class="row">
             <div class="item features-without-image col-12 col-md-6 col-lg-3 item-mb active">
                 <div class="item-wrapper">
@@ -651,7 +670,14 @@ Cómo organizar el tiempo para estudiar varias materias
                     <div class="item-content">
                         <p class="mbr-text mbr-fonts-style display-7">Obtene el trabajo terminado y listo para entregar lo antes posible, una vez que lo entregas podemos hacer sesiones de estudio para que comprendas bien lo que entregaste y avances con los conocimientos.</p>
                     </div>
-                    <div class="mbr-section-btn item-footer"><div contenteditable="true" style="position: absolute; left: -100000px; opacity: 0;"></div><a href="https://api.whatsapp.com/send?phone=5491128688983&text=Hola%20Jose.%20Vengo%20de%20tu%20web%20y%20me%20gustaria%20consultarte%20por%20resolucion%20de%20TPs." class="btn item-btn btn-primary display-7">¡Consulta ahora!</a></div>
+                    <div class="mbr-section-btn item-footer">
+                      <div contenteditable="true" style="position: absolute; left: -100000px; opacity: 0;">
+                      </div>
+                        <button id="consultaAhora" onclick="consultaAhora('Resolucion de TPs')" class="btn item-btn btn-primary display-7">¡Consulta ahora!</button>
+              </div>
+
+
+
                 </div>
             </div>
             <div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb">
@@ -666,7 +692,12 @@ Cómo organizar el tiempo para estudiar varias materias
                         <p class="mbr-text mbr-fonts-style display-7">Aproba tus materias de programación con un mentor apasionado y dedicado que se adapta a tu ritmo y necesidades,asegurando que domines las bases fundamentales lo antes posible, para un aprendizaje más fácil y menos frustrante.<br>No desapruebes por no llegar a comprender, de manera flexible y personalizada veremos los conocimientos base necesarios y construiras tus conocimientos solidamente.</p>
                     </div>
 
-                    <div class="mbr-section-btn item-footer"><div contenteditable="true" style="position: absolute; left: -100000px; opacity: 0;"></div><a href="https://api.whatsapp.com/send?phone=5491128688983&text=Hola%20Jose.%20Vengo%20de%20tu%20web%20y%20me%20gustaria%20consultarte%20por%20mentorias%20universitarias." class="btn item-btn btn-primary display-7">¡Consulta ahora!</a></div>
+                    <div class="mbr-section-btn item-footer">
+                      <div contenteditable="true" style="position: absolute; left: -100000px; opacity: 0;">
+                      </div>
+                        <button id="consultaAhora" onclick="consultaAhora('una Mentoria de programacion universitaria')" class="btn item-btn btn-primary display-7">¡Consulta ahora!</button>
+                      </div>
+
                 </div>
             </div>
 
@@ -685,7 +716,11 @@ Cómo organizar el tiempo para estudiar varias materias
                     <div class="item-content">
                         <p class="mbr-text mbr-fonts-style display-7">Disfruta de un acompañamiento total y prioridad en la resolución de consultas y trabajos, de materias de Programacion, Ingles, Ingles tecnico y Matematicas basicas. Me podras pedir mentorias y resoluciones todos los dias, todas las semanas. Practicamente es cursar juntos.</p>
                     </div>
-                    <div class="mbr-section-btn item-footer"><div contenteditable="true" style="position: absolute; left: -100000px; opacity: 0;"></div><a href="https://api.whatsapp.com/send?phone=5491128688983&text=Hola%20Jose.%20Vengo%20de%20tu%20web%20y%20me%20gustaria%20consultarte%20por%20mentorias%20universitarias%20PREMIUM." class="btn item-btn btn-primary display-7">¡Consulta ahora!</a></div>
+                    <div class="mbr-section-btn item-footer">
+                      <div contenteditable="true" style="position: absolute; left: -100000px; opacity: 0;">
+                </div>
+                        <button id="consultaAhora" onclick="consultaAhora('un Acompañamiento universitario Premium')" class="btn item-btn btn-primary display-7">¡Consulta ahora!</button>
+              </div>
                 </div>
             </div>
         </div>
