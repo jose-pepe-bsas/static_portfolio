@@ -388,8 +388,14 @@ src="https://www.facebook.com/tr?id=364073559835669&ev=PageView&noscript=1"
                         <h5 class="item-title mbr-fonts-style display-7">20 de Junio</h5>
                         <h6 class="item-subtitle mbr-fonts-style display-5"><strong>Abordando la complejidad del diseño con TDD<br></strong></h6>
                         <p class="mbr-text mbr-fonts-style display-7">¿Cuanta complejidad puede usted manejar, en una sesión de trabajo, al desarrollar software?</p>
-                        <a href="https://www.linkedin.com/pulse/es-walkthrough-backend-development-4-abordando-la-complejidad-pepe-jppkf/" class="mbr-text mbr-fonts-style display-7">Leer ahora</a>
-                        
+                        <button id="addToCartButton" onclick="goNewsletterTdd()" class="mbr-text mbr-fonts-style display-7">Leer ahora</button>
+          <script type="text/javascript">
+              function goNewsletterTdd(){
+              fbq('track', 'ViewContent', {content_ids: ["linkedin-walktrough-tdd"]});
+              window.location.href = "https://www.linkedin.com/pulse/es-walkthrough-backend-development-4-abordando-la-complejidad-pepe-jppkf";
+              }
+          </script>
+
                     </div>
                 </div>
             </div>
