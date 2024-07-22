@@ -149,7 +149,12 @@ src="https://www.facebook.com/tr?id=364073559835669&ev=PageView&noscript=1"
         
         <p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7">El respaldo en Programacion y Software que necesitas<br>para <strong>progresar</strong> en tu formacion.</p>
         <div class="mbr-section-btn" style="text-align:center;">
-          <a class="btn btn-white-outline display-7" href="#pricing-cards-1-ugEOs2cTPD">Ver oferta</a>
+          <a id="addToCartButton" class="btn btn-white-outline display-7" href="#pricing-cards-1-ugEOs2cTPD">Ver oferta</a>
+          <script type="text/javascript">
+            $('#addToCartButton').click(function() {
+              fbq('track', 'Purchase', {currency: "USD", value: 30.00});
+            });
+</script>
         </div>
       </div>
     </div>
